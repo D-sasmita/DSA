@@ -1,0 +1,21 @@
+class Solution {
+public:
+    bool check(vector<int>& arr) {
+        int n = arr.size();
+        int count =0;
+//comparing the lement from inedx 1 beacuse the for the 0th index 0-1 =-1 will be out of index of array
+        for(int i=1;i<n;i++)
+        {
+            if(arr[i-1]>arr[i])
+            {
+                count ++;
+            }
+        }
+        //for the  0th elemnet
+        if(arr[n-1]>arr[0])
+        {
+            count++;
+        }
+        return count<=1;
+    }
+};
